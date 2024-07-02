@@ -21,40 +21,16 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   },
   {
     key: "products",
-    label: "Product",
+    label: "Products",
     path: "/product",
     icon: <HiOutlineCube />,
   },
   {
     key: "users",
-    label: "User",
+    label: "Users",
     path: "/user",
     icon: <TiGroup />,
   },
-  //   {
-  //     key: "orders",
-  //     label: "Orders",
-  //     path: "/orders",
-  //     icon: <HiOutlineShoppingCart />,
-  //   },
-  //   {
-  //     key: "customers",
-  //     label: "Customers",
-  //     path: "/customers",
-  //     icon: <HiOutlineUsers />,
-  //   },
-  //   {
-  //     key: "transactions",
-  //     label: "Transactions",
-  //     path: "/transactions",
-  //     icon: <HiOutlineDocumentText />,
-  //   },
-  //   {
-  //     key: "messages",
-  //     label: "Messages",
-  //     path: "/messages",
-  //     icon: <HiOutlineAnnotation />,
-  //   },
 ];
 
 export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [

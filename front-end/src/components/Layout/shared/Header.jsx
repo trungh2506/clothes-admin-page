@@ -19,20 +19,13 @@ import {
   Square2StackIcon,
   TrashIcon,
 } from "@heroicons/react/16/solid";
+import { FaSignOutAlt } from "react-icons/fa";
+import SideBarLink from "./SideBarLink";
+import SearchBar from "../../SearchBar";
 function Header() {
   return (
-    <div className="h-20 p-5 bg-white flex justify-between items-center drop-shadow">
-      <div className="relative">
-        <CiSearch
-          className="absolute top-0.5 translate-y-1.5 left-2"
-          fontSize={25}
-        />
-        <input
-          type="text"
-          placeholder="Tìm kiếm..."
-          className="active:outline-none h-10 w-[24rem] pl-11 px-4"
-        />
-      </div>
+    <div className="h-16 p-5 bg-white flex justify-between items-center drop-shadow-lg bg-opacity-50">
+      <SearchBar></SearchBar>
       <div className="flex items-center gap-2 mr-2 cursor-pointer">
         <FaBell
           fontSize={25}
@@ -44,20 +37,20 @@ function Header() {
             <img
               src="https://play-lh.googleusercontent.com/ErldJvx4jIkY9kWN73f_MbxLS4nkxL1fQwJAmHRuAmMITd5p20UUMl59r1CdRMSZ7fei"
               alt=""
-              className="rounded-full w-12 h-12 overflow-hidden"
+              className="rounded-full w-10 h-10 overflow-hidden"
             />
             <span className="text-gray-600">Hàn Quốc Trung</span>
           </MenuButton>
           <MenuItems
             anchor="bottom start"
             transition
-            className="origin-top text-gray-500 font-light bg-white flex flex-col text-base p-4 drop-shadow rounded-md transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
+            className="origin-top text-gray-500 bg-white flex flex-col text-sm pt-2 pb-2 drop-shadow rounded-md transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
           >
-            <MenuItem className="p-1 rounded-md">
+            <MenuItem className="p-2">
               <NavLink
                 className={({ isActive }) =>
                   isActive
-                    ? "flex items-center bg-blue-600 text-white  gap-2 p-2"
+                    ? "flex items-center bg-blue-600 text-white gap-2 p-2"
                     : "flex items-center data-[focus]:bg-blue-100 gap-2 p-2"
                 }
                 to="profile"
@@ -66,7 +59,7 @@ function Header() {
                 My profile
               </NavLink>
             </MenuItem>
-            <MenuItem className="p-1 rounded-md">
+            <MenuItem className="p-2">
               <Link
                 className="flex items-center data-[focus]:bg-blue-100 gap-2 p-2"
                 to=""
@@ -74,10 +67,13 @@ function Header() {
                 <SlEnvolopeLetter /> My account
               </Link>
             </MenuItem>
-            <MenuItem className="flex justify-center items-center mt-3">
-              <Button className="text-blue-600 border rounded-md hover:border-blue-600">
-                Logout
-              </Button>
+            <MenuItem className="p-2">
+              <Link
+                className="flex items-center data-[focus]:bg-blue-100 gap-2 p-2 text-red-600"
+                to=""
+              >
+                <FaSignOutAlt /> Sign out
+              </Link>
             </MenuItem>
           </MenuItems>
         </Menu>
