@@ -75,7 +75,7 @@ export default function UserPage() {
             <SearchBar></SearchBar>
             <Button
               onClick={() => setShowModal(true)}
-              className="text-white bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+              className="text-white bg-blue-600 hover:bg-blue-700 flex items-center gap-2 p-3"
             >
               <IoPersonAdd size={20} />
               Add User
